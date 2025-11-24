@@ -1,0 +1,18 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: nextjs-app-ingressroute
+spec:
+  entryPoints:
+    - websecure
+
+  routes:
+    - match: Host(`www.dailygood.life`) || Host(`dailygood.life`)
+      kind: Rule
+      services:
+        - name: nextjs-app-service
+          port: 80
+         
+
+  tls:
+    certResolver: myresolver
