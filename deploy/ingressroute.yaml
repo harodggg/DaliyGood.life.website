@@ -7,7 +7,7 @@ spec:
     - websecure
 
   routes:
-    - match: Host(`www.dailygood.life`) || Host(`dailygood.life`)
+    - match: Host(`www.dailygood.life`)
       kind: Rule
       services:
         - name: nextjs-app-service
