@@ -1,0 +1,24 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: dailygoodlife
+
+# 基础资源文件列表
+resources:
+  - deployment.yaml
+  - service.yaml
+  - namespace.yaml
+  - ingressroute.yaml
+
+# ⚠️ 可选: 如果您想给所有资源名称添加一个前缀，可以取消注释下面两行
+# namePrefix: dev-
+
+# ⚠️ 可选: 如果您想修改 Deployment 的副本数量，可以取消注释下面代码块
+# patches:
+# - patch: |-
+#     - op: replace
+#       path: /spec/replicas
+#       value: 5
+#   target:
+#     kind: Deployment
+#     name: nextjs-app-deployment

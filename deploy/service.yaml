@@ -1,0 +1,14 @@
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nextjs-app-service
+spec:
+  # LoadBalancer 类型用于对外暴露服务 (需要云服务商支持)
+  # 若仅集群内部访问, 可改为 ClusterIP
+  type: LoadBalancer 
+  ports:
+  - port: 80
+    targetPort: 3000 # 映射到容器的 3000 端口
+  selector:
+    app: nextjs-app
