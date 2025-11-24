@@ -18,7 +18,7 @@ spec:
       containers:
       - name: nextjs-app-container
         # ⚠️ 替换为您自己的 Next.js Docker 镜像地址
-        image: my-nextjs-app:latest 
+        image: axelharold/daliygoodlife-website:main 
         ports:
         - containerPort: 3000
         # 建议添加资源限制和健康检查
