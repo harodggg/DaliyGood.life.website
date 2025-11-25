@@ -69,7 +69,7 @@ export default function Home() {
             {/* 4. 页脚区域 */}
             <footer className="mt-12 text-center space-y-4">
                 <div className="flex items-center justify-center space-x-6 text-gray-500">
-                    <Link href="/about" className="hover:text-teal-600 transition-colors text-sm   !text-gray-400">
+                    <Link href="/about-2" className="hover:text-teal-600 transition-colors text-sm   !text-gray-400">
                         了解更多关于我们
                     </Link>
 
