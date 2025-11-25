@@ -57,28 +57,30 @@ export default function Home() {
                 <Link href="/rpc-service" className="inline-block w-full py-3 
               bg-teal-600 hover:bg-teal-700 
               text-white 
+              !text-white
               font-semibold 
               rounded-lg 
               transition duration-150 shadow-md hover:shadow-lg">
                     Access Now
                 </Link>
             </main>
+           
 
             {/* 4. 页脚区域 */}
             <footer className="mt-12 text-center space-y-4">
                 <div className="flex items-center justify-center space-x-6 text-gray-500">
-                    <Link href="/about" className="hover:text-teal-600 transition-colors text-sm">
+                    <Link href="/about" className="hover:text-teal-600 transition-colors text-sm   !text-gray-400">
                         了解更多关于我们
                     </Link>
 
                     {/* 社交图标链接 */}
-                    <a href="#" target="_blank" className="hover:text-teal-600 transition-colors" title="GitHub">
+                    <a href="https://github.com/harodggg/DaliyGood.life.website" target="_blank" className="hover:text-teal-600 transition-colors   !text-gray-400" title="GitHub">
                         <i className="fa-brands fa-github text-lg"></i>
                     </a>
-                    <a href="#" target="_blank" className="hover:text-teal-600 transition-colors" title="Discord">
+                    <a href="#" target="_blank" className="hover:text-teal-600 transition-colors   !text-gray-400" title="Discord">
                         <i className="fa-brands fa-discord text-lg"></i>
                     </a>
-                    <a href="#" target="_blank" className="hover:text-teal-600 transition-colors" title="Telegram">
+                    <a href="https://t.me/+V0EHRK5yI9xlZjQ1" target="_blank" className="hover:text-teal-600 transition-colors   !text-gray-400 " title="Telegram">
                         <i className="fa-brands fa-telegram-plane text-lg"></i>
                     </a>
                 </div>
