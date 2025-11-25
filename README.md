@@ -1,83 +1,14 @@
-# With Docker
 
-This examples shows how to use Docker with Next.js based on the [deployment documentation](https://nextjs.org/docs/deployment#docker-image). Additionally, it contains instructions for deploying to Google Cloud Run. However, you can use any container-based deployment host.
+<p align="center"> <img src="./resources/logo-600-500.png" alt="DailyGood.life Logo" width="300" height="300"></p>
 
-## How to use
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/harodggg/DaliyGood.life)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.dailygood.life%2F)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/harodggg/DaliyGood.life.website/docker-push.yml?branch=main)
+![GitHub Tag](https://img.shields.io/github/v/tag/harodggg/DaliyGood.life.website)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), [pnpm](https://pnpm.io) or [bun](https://bun.sh/docs/cli/bun-create) to bootstrap the example:
+# 项目简介
 
-```bash
-npx create-next-app --example with-docker nextjs-docker
-```
+互联网,AI,短视频,直播,游戏,区块链等等在过去20年迅速发展。当技术迅速发展,世界发生翻天覆地的变化,对于活在这段时间的人们,技术带来的不是安逸舒适幸福,而是混乱和麻木。对此,我想要去探讨什么样的生活是好的？如何好好的生活？
+> While technology has reshaped our world, it hasn't necessarily healed our minds. Instead of comfort, we often feel chaos. Here, we pause to ask the essential question: In a digital age, what does it mean to truly live a good life?
 
-```bash
-yarn create next-app --example with-docker nextjs-docker
-```
-
-```bash
-pnpm create next-app --example with-docker nextjs-docker
-```
-
-```bash
-bun create next-app --example with-docker nextjs-docker
-```
-
-## Using Docker
-
-1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
-1. Build your container: 
-    ```bash
-    # For npm, pnpm or yarn
-    docker build -t nextjs-docker .
-    
-    # For bun
-    docker build -f Dockerfile.bun -t nextjs-docker .
-    ```
-1. Run your container: `docker run -p 3000:3000 nextjs-docker`.
-
-You can view your images created with `docker images`.
-
-### In existing projects
-
-To add Docker support, copy [`Dockerfile`](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile) to the project root. If using Bun, copy [`Dockerfile.bun`](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile.bun) instead. Then add the following to next.config.js:
-
-```js
-// next.config.js
-module.exports = {
-  // ... rest of the configuration.
-  output: "standalone",
-};
-```
-
-This will build the project as a standalone app inside the Docker image.
-
-## Deploying to Google Cloud Run
-
-1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) so you can use `gcloud` on the command line.
-1. Run `gcloud auth login` to log in to your account.
-1. [Create a new project](https://cloud.google.com/run/docs/quickstarts/build-and-deploy) in Google Cloud Run (e.g. `nextjs-docker`). Ensure billing is turned on.
-1. Build your container image using Cloud Build: `gcloud builds submit --tag gcr.io/PROJECT-ID/helloworld --project PROJECT-ID`. This will also enable Cloud Build for your project.
-1. Deploy to Cloud Run: `gcloud run deploy --image gcr.io/PROJECT-ID/helloworld --project PROJECT-ID --platform managed --allow-unauthenticated`. Choose a region of your choice.
-
-   - You will be prompted for the service name: press Enter to accept the default name, `helloworld`.
-   - You will be prompted for [region](https://cloud.google.com/run/docs/quickstarts/build-and-deploy#follow-cloud-run): select the region of your choice, for example `us-central1`.
-
-## Running Locally
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-bun run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+我们首先确保做能够让我们自己生活的变好的事情,然后把这个东西分享出去,就能够改变世界,让这个世界变得更好。
