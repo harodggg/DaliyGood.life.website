@@ -1,5 +1,5 @@
 
-<p align="center"> <img src="./resources/logo-600-500.png" alt="DailyGood.life Logo" width="300" height="300"></p>
+<p align="center"> <img src="./resources/logo.png" alt="DailyGood.life Logo" width="300" height="300"></p>
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/harodggg/DaliyGood.life)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.dailygood.life%2F)
