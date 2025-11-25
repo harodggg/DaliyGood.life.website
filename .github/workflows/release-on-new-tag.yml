@@ -1,0 +1,70 @@
+name: CI/CD Release on New Tag
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+' # 匹配类似 v1.0.0, v2.3.4 的版本标签
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    
+    # 允许 GITHUB_TOKEN 写入权限来创建 Release
+    permissions:
+      contents: write 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # 获取完整的历史记录，以便在后续步骤中获取 Tag 信息和生成更新日志
+        with:
+          fetch-depth: 0 
+
+      # --- CI 步骤 (构建和测试) ---
+      
+      - name: Setup Node.js (以 Node 项目为例)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        # 重要的 CI 步骤，确保只有通过测试的代码才会被发布
+        run: npm test 
+
+      # --- CD 步骤 (发布 Release) ---
+      
+      - name: Build Assets (可选)
+        # 如果需要编译二进制文件或生成打包文件，在这里执行
+        run: |
+          echo "Release build started for ${{ github.ref_name }}"
+          # 假设我们生成了一个发布文件
+          echo "Build artifact for ${{ github.ref_name }}" > release-asset.txt
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          # Tag 名称：使用触发推送的 Tag 名称（例如 v1.0.0）
+          tag_name: ${{ github.ref }} 
+          # Release 名称：使用 Tag 名称作为标题
+          name: Release ${{ github.ref_name }}
+          # body: 您可以在这里使用工具自动生成更新日志
+          body: |
+            ## 🎉 新功能和改进
+            - 请在这里写上主要的更新内容。
+            
+            完整的变更日志请参考：[CHANGELOG.md]
+          # draft: true # 如果您希望先发布为草稿，可以启用
+          prerelease: ${{ contains(github.ref_name, 'beta') || contains(github.ref_name, 'rc') }}
+          
+      - name: Upload Release Asset (将上一步生成的 asset 附加到 Release)
+        uses: actions/upload-release-asset@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # 上一步创建 Release 的 URL
+          asset_path: ./release-asset.txt # 上传您在 Build Assets 步骤中生成的具体文件
+          asset_name: ${{ github.ref_name }}_release.txt
