@@ -10,9 +10,9 @@
 name: Publish Docker image
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
   release:
     types: [published]
 
@@ -49,6 +49,9 @@ jobs:
           images: |
             axelharold/daliygoodlife-website           
             ghcr.io/${{ github.repository }}
+          tags: |
+            type=ref,event=tag # 从 git tag (e.g. v1.0.0) 生成标签 (e.g. 1.0.0)
+            type=raw,value=latest,enable=${{ endsWith(github.ref, format('.{0}', '.0')) }} # 如果是 .0 结尾的 tag，也打上 latest 标签 (可选)
 
       - name: Build and push Docker images
         id: push
