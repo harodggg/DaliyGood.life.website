@@ -70,7 +70,7 @@ function RpcService() {
 
             {/* 使用 <main> 标签包裹页面的核心内容 */}
              <main > 
-                <h1> Rpc服务</h1>
+                <h1 className="text-3xl font-bold underline red"> Rpc服务</h1>
                 <FreeRpcService />
                 <hr />
                 <TestRpcService />

@@ -13,6 +13,11 @@ export default function Home() {
       <main>
         <h1 className={styles.title}>Welcome to Daliy Good Life!</h1>
         <img src="/daliygoodlife-logo.png" alt="Daliy Good Life Logo" width="800" height="500" />
+        <h1 className="text-2xl font-bold underline">
+          Hello world!
+        </h1>
+
+
 
         <Link href="/rpc-service">
           rpc服务
