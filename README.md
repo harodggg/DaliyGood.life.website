@@ -5,6 +5,7 @@
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.dailygood.life%2F)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/harodggg/DaliyGood.life.website/docker-push.yml?branch=main)
 ![GitHub Tag](https://img.shields.io/github/v/tag/harodggg/DaliyGood.life.website)
+[![Telegram](https://img.shields.io/badge/Telegram-Join%20Chat-blue?logo=telegram&style=flat-square)](https://t.me/+V0EHRK5yI9xlZjQ1)
 
 # 项目简介
 
