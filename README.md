@@ -1,7 +1,7 @@
 
 <p align="center"> <img src="./resources/logo.png" alt="DailyGood.life Logo" width="300" height="300"></p>
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/t/harodggg/DaliyGood.life)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/harodggg/DaliyGood.life.website)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.dailygood.life%2F)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/harodggg/DaliyGood.life.website/docker-push.yml?branch=main)
 ![GitHub Tag](https://img.shields.io/github/v/tag/harodggg/DaliyGood.life.website)
