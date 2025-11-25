@@ -13,8 +13,12 @@ on:
   # push:
   #   branches:
   #     - main
+  # push:
+  #   tags:
+  #       - 'v*.*.*'  # 仅在推送以 v 开头的标签时触发，例如 v1.0.0
+
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   push_to_registries:
