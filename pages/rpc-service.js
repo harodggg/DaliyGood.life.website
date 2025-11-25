@@ -20,7 +20,7 @@ function FreeRpcService() {
 
 function TestRpcService() {
     return < div class="container" >
-    <h2>RPC 服务测试客户端</h2>
+        <h2 ClassName="flex items-center justify-center">RPC 服务测试客户端</h2>
     
     <div class="input-group">
         <label for="service-url">RPC 服务地址 (URL/IP:Port)</label>
@@ -70,9 +70,11 @@ function RpcService() {
 
             {/* 使用 <main> 标签包裹页面的核心内容 */}
              <main > 
-                <h1 className="text-3xl font-bold underline red"> Rpc服务</h1>
+                <h1 className="text-3xl text-blue-600 font-bold underline flex justify-center items-center "> Rpc服务</h1>
                 <FreeRpcService />
                 <hr />
+
+            
                 <TestRpcService />
                
                 {/* 导航链接示例 */}
