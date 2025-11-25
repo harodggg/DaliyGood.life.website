@@ -54,7 +54,7 @@ export default function Home() {
                     Fast, secure, and reliable access to the network.
                 </p>
 
-                <Link href="/rpc-service" className="inline-block w-full py-3 
+                <Link href="/rpc-service-2" className="inline-block w-full py-3 
               bg-teal-600 hover:bg-teal-700 
               text-white 
               !text-white
